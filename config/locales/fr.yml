@@ -3,7 +3,7 @@ en:
   thredded:
     content_moderation_states:
       content_blocked_notice: Bloqué
-      content_blocked_notice_with_record_html: Blocked par %{moderator} %{time_ago}
+      content_blocked_notice_with_record_html: Bloqué par %{moderator} %{time_ago}
     email_notifier:
       by_email: par email
     errors:
@@ -13,7 +13,7 @@ en:
       private_topic_not_found: Ce sujet privé n'existe pas.
     form:
       create_btn_submitting: Creation en cours...
-      update: Actualisation...
+      update: Mettre à jour
       update_btn_submitting: Actualisation...
       preview: Aperçu
     messageboard:
@@ -121,7 +121,7 @@ en:
         users_label: Participants
         users_placeholder: Choisir les utilisateurs qui participeront à cette conversation
       no_private_topics:
-        create_btn: Start your first private conversation
+        create_btn: Démarrez votre première conversation
         title: Vous n'avez aucun message privé.
       updated_notice: Titre mis à jour
     recent_activity: Activité récente
@@ -143,7 +143,7 @@ en:
       following:
         manual: Vous suivez ce sujet.
         mentioned: Vous suivez ce sujet car vous y avez été mentionné.
-        posted: Vous suivez ce sujet car vous avezYou are following this topic because you posted to it.
+        posted: Vous suivez ce sujet car vous y avez publié un message.
       form:
         categories_placeholder: Categories
         content_label: :thredded.posts.form.content_label
