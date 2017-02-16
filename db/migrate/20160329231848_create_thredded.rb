@@ -149,8 +149,8 @@ class CreateThredded < ActiveRecord::Migration
     end
 
     create_table :thredded_messageboard_users do |t|
-      t.references :thredded_user_detail, foreign_key: true, null: false
-      t.references :thredded_messageboard, foreign_key: true, null: false
+      t.references :thredded_user_detail, foreign_key: { on_delete: :cascade }, null: false
+      t.references :thredded_messageboard, foreign_key: { on_delete: :cascade }, null: false
       t.datetime :last_seen_at, null: false
       t.index [:thredded_messageboard_id, :thredded_user_detail_id],
               name: :index_thredded_messageboard_users_primary
@@ -236,6 +236,16 @@ class CreateThredded < ActiveRecord::Migration
       t.boolean :enabled, default: true, null: false
       t.index [:user_id, :messageboard_id, :notifier_key],
               name: 'thredded_messageboard_notifications_for_followed_topics_unique', unique: true
+    end
+
+    create_table :thredded_user_post_notifications do |t|
+      t.references :user, null: false
+      t.foreign_key Thredded.user_class.table_name, column: :user_id, on_delete: :cascade
+      t.references :post, null: false
+      t.foreign_key :thredded_posts, column: :post_id, on_delete: :cascade
+      t.datetime :notified_at, null: false
+      t.index :post_id, name: :index_thredded_user_post_notifications_on_post_id
+      t.index [:user_id, :post_id], name: :index_thredded_user_post_notifications_on_user_id_and_post_id, unique: true
     end
   end
 end

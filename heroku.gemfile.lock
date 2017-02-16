@@ -72,7 +72,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
-    autoprefixer-rails (6.7.1)
+    autoprefixer-rails (6.7.2)
       execjs
     autosize-rails (1.18.17)
       rails (>= 3.1)
@@ -117,7 +117,7 @@ GEM
       html-pipeline (~> 2.0)
     htmlentities (4.3.4)
     http_accept_language (2.1.0)
-    i18n (0.7.0)
+    i18n (0.8.0)
     inline_svg (0.11.1)
       activesupport (>= 4.0)
       loofah (>= 2.0)
@@ -141,7 +141,6 @@ GEM
     katex (0.1.1)
       execjs (~> 2.7)
     kramdown (1.13.2)
-    libv8 (5.3.332.38.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -151,8 +150,6 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
-    mini_racer (0.1.7)
-      libv8 (~> 5.3)
     minitest (5.10.1)
     multi_json (1.12.1)
     newrelic_rpm (3.18.0.329)
@@ -240,7 +237,7 @@ GEM
     thread_safe (0.3.5)
     thredded-markdown_coderay (0.1.0)
       coderay
-    thredded-markdown_katex (0.1.0)
+    thredded-markdown_katex (0.1.1)
       katex (>= 0.1.1)
     tilt (2.0.6)
     turbolinks (5.0.1)
@@ -263,7 +260,6 @@ DEPENDENCIES
   factory_girl_rails
   faker (>= 1.6.2)
   http_accept_language
-  mini_racer
   newrelic_rpm
   pg
   puma
